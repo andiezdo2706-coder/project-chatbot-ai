@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync-doc": "node -e \"require('fs').copyFileSync('../lambda/document.md','public/document.md')\"",
+    "sync-doc": "node -e \"const fs=require('fs'),s='../lambda/document.md';fs.existsSync(s)?fs.copyFileSync(s,'public/document.md'):console.log('sync-doc: skip, source not found (dùng public/document.md có sẵn)')\"",
     "predev": "npm run sync-doc",
     "prebuild": "npm run sync-doc"
   },
