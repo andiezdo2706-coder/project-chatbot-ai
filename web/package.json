@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run sync-doc && next dev -p 3005",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "sync-doc": "node -e \"require('fs').copyFileSync('../lambda/document.md','public/document.md')\"",
+    "predev": "npm run sync-doc",
+    "prebuild": "npm run sync-doc"
+  },
+  "dependencies": {
+    "next": "15.5.28",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.28",
+    "typescript": "^5"
+  }
+}

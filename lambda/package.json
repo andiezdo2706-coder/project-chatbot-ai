@@ -1,0 +1,14 @@
+{
+  "name": "document-chatbot-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lambda handler: document-grounded Q&A with Amazon Bedrock",
+  "scripts": {
+    "test": "node test-local.mjs",
+    "zip": "rm -f function.zip && zip -q function.zip index.mjs document.md && echo 'Created lambda/function.zip'"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.700.0"
+  }
+}
