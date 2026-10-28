@@ -40,6 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated from ../lambda/document.md
-/public/document.md
+# public/document.md được commit để Amplify có tài liệu lúc build
+# (lúc dev, script sync-doc sẽ cập nhật lại từ ../lambda/document.md)
 !.env.example
